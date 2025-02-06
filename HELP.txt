@@ -1,0 +1,22 @@
+CREATE ENV FILE
+
+MONGO_URI = mongodb+srv://TEST:TEST@cluster0.hf4wu.mongodb.net/cargo?retryWrites=true&w=majority
+PORT=5000
+JWT_SECRET = JBFSJKEFNJK23INU78
+EXPIRE_TOKEN = 1*60*60*1000
+
+
+ensure you have node 20.17.0 installed
+RUN
+npm run i
+npm run start:dev
+
+You will need postman application to test
+
+http://localhost:5000/api/users/login
+http://localhost:5000/api/users/register
+http://localhost:5000/api/admin/register
+
+copy token to bearer to access all admin route
+
+http://localhost:5000/api/admin/allcarrier
